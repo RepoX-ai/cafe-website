@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f1e8;
+    color: #2b2118;
+}
+
+/* NAVBAR */
+
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 25px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 28px;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* HERO */
+
+#home {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 40px;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("../images/cafe.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+#home h2 {
+    font-size: 64px;
+    margin-bottom: 15px;
+}
+
+#home p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#home > a {
+    display: inline-block;
+    padding: 14px 28px;
+
+    background-color: #c89b6d;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+/* MENU SECTION */
+
+#menu {
+    padding: 100px 40px;
+    background-color: #f5f1e8;
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.section-label {
+    color: #b47b48;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+#menu h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.menu-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.menu-card {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    text-align: left;
+}
+
+.menu-card h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.menu-card p {
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.menu-card span {
+    color: #b47b48;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* ABOUT */
+
+#about {
+    padding: 100px 40px;
+    background-color: white;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.about-image img {
+    width: 100%;
+    height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+
+/* LOCATION / HOURS / CONTACT */
+
+#contact {
+    padding: 80px 40px;
+    background-color: #2b2118;
+    color: white;
+}
+
+.info-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 40px;
+}
+
+.info-card {
+    text-align: center;
+}
+
+.info-card h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.info-card p {
+    color: #d6d0ca;
+    margin-bottom: 10px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #1d1712;
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #aaa;
+}
+
+.copyright {
+    margin-top: 25px;
+    font-size: 14px;
+}
+/* HAMBURGER BUTTON */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* SMOOTH SCROLL */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+
+        position: absolute;
+        top: 75px;
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+        align-items: center;
+
+        background-color: #2b2118;
+
+        padding: 30px;
+        gap: 25px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+
+    /* HERO */
+
+    #home h2 {
+        font-size: 42px;
+    }
+
+    #home p {
+        font-size: 17px;
+    }
+
+
+    /* MENU */
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ABOUT */
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image img {
+        height: 350px;
+    }
+
+
+    /* CONTACT */
+
+    .info-container {
+        grid-template-columns: 1fr;
+    }
+
+}
